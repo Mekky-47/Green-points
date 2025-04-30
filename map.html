@@ -145,17 +145,51 @@
       background-size: cover;
       height: 100vh;
     }
+    .navbar-brand::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background: var(--main-color);
+        transition: all 0.3s ease-in-out;
+      }
+      .navbar-brand:hover {
+        transform: translateY(-3px);
+      }
+      
+      .navbar-brand:hover::after {
+        width: 100%;
+        left: 0;
+      }
 
         a{
             text-decoration: none;
         }
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--text-color);
+            transition: all 0.3s ease-in-out;
+          }
+          
+          .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+          }
+          
     </style>
 </head>
 
 <body>
     <section id="hero" class=" vh-100">
         <nav class="navbar navbar-expand-sm navbar-light">
-            <div class="container">
+            <div class="container-fluid d-flex px-5">
                 <a class="navbar-brand" href="#">Green <span>Points</span> </a>
                 <button class="navbar-toggler d-lg-none" type="button " data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -169,10 +203,10 @@
                                 <span class="visually-hidden">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#our-survice">Our Services</a>
+                            <a class="nav-link" href="index.html#our-survice">The Process</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#our_plans">Our plans</a>
+                            <a class="nav-link" href="index.html#our_plans">Our Services</a>
                         </li>
 
                         <li class="nav-item">
@@ -274,7 +308,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
 

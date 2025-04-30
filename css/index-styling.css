@@ -1,0 +1,405 @@
+:root {
+  --main-color: #143601;
+  --text-color: #597445;
+}
+body {
+  overflow-x: hidden;
+  background: radial-gradient(circle at top , #dce9d0, #abcfab, #dce9d0);
+  position: relative;
+
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/natural-paper.png'); /* Soft dot texture */
+  opacity: 0.2; /* Adjust transparency to make it subtle */
+  pointer-events: none;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: white;
+}
+.main-color {
+  color: var(--main-color);
+}
+.sec-color {
+  color: var(--text-color);
+}
+/* From Uiverse.io by adamgiebl */ 
+.cssbuttons-io-button {
+  background: #538D22;
+  
+  color: #ebf3e1;
+  padding: 0.5em 1em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #538D22;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  width: 25%;
+  
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #538D22;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+  color: white;
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Underline Effect */
+.navbar-brand::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar-brand:hover {
+  transform: translateY(-3px); /* Slight upward motion */
+}
+
+.navbar-brand:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 1.2rem;
+  position: relative;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Underline Effect for Nav Links */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.divider {
+  width: 1px;
+  margin: 0 10px;
+  background: rgb(0, 0, 0); /* Semi-transparent white divider */
+}
+
+
+.container {
+  height: 80%;
+}
+.main_btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.01em 1.5em;
+  padding-top: 0.4rem;
+  border: var(--main-color) solid 0.15em;
+  border-radius: 0.25em;
+  color: var(--main-color);
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+
+.main_btn p {
+  z-index: 1;
+}
+
+.main_btn:hover {
+  color: #212121;
+}
+
+.main_btn:active {
+  border-color: teal;
+}
+
+.main_btn::after,
+.main_btn::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: var(--main-color);
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.main_btn::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.main_btn::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.main_btn:hover:before {
+  transform: translateX(-1em);
+}
+
+.main_btn:hover:after {
+  transform: translateX(1em);
+}
+
+.main_btn:active:before,
+.main_btn:active:after {
+  background: teal;
+}
+#hero .imgs {
+  position: relative;
+}
+.imgs img:nth-child(1) {
+  position: absolute;
+  left: 10px;
+  bottom: -510px;
+}
+.imgs img:nth-child(2) {
+  position: absolute;
+  right: -180px;
+  top: -90px;
+  rotate: 20deg;
+}
+#hero {
+  overflow: hidden;
+}
+.line {
+  position: relative;
+}
+.line::after {
+  position: absolute;
+  content: "";
+  background-color: #597445;
+  height: 100%;
+  top: 0;
+  right: 0px;
+  width: 5px;
+}
+
+
+.tiles {
+  position: relative;
+}
+
+
+/* From Uiverse.io by gharsh11032000 */ 
+.tile {
+  position: relative;
+  width: 360px;
+  height: 240px;
+  background: linear-gradient(-45deg, #1A4301 0%, #73A942 100% );
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  cursor: pointer;
+  color: #e7efdb;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+.tile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tile_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.tile:hover .tile_content{
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.stay-hovered {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.tile_title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.tile_description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.progress-bar-container {
+  position: absolute;
+  width: 12px; /* Thin vertical bar */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* Actual Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 0%;
+  background: #28a745;
+  transition: height 0.1s ease;
+}
+
+.popover {
+    max-width: 100% !important; /* Increase width */
+    min-width: 250px; /* Optional: Set a minimum width */
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.popover-body {
+    padding: 10px; 
+    text-align: center; /* Centers the image */
+}
+
+.popover-img {
+    max-width: auto; /* Ensures it fits inside */
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.rev-section {
+  color: #ebf3e1;
+  position: relative;
+  background: #3a630f; /* Base background color */
+  text-align: center;
+  overflow: hidden;
+  height: 50vh;
+  margin:30px;
+  border-radius: 12px;
+}
+
+/* Add the diagonal overlay */
+.rev-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(20deg, rgba(130, 224, 107, 0.315) 20%, transparent 40%), 
+              linear-gradient(-20deg, rgba(0, 0, 0, 0.39) 20%, transparent 60%);
+  z-index: 0;
+}
+
+.footer{
+  background: #3a630f;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.footer::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(20deg, rgba(130, 224, 107, 0.315) 20%, transparent 40%), 
+              linear-gradient(-20deg, rgba(0, 0, 0, 0.39) 20%, transparent 60%);
+  z-index: 0;
+}

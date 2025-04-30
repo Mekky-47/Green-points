@@ -1,0 +1,383 @@
+:root {
+  --main-color: #597445;
+  --text-color: #729762;
+
+}
+
+h2{
+  color: #597445;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #D5E5CB;
+}
+
+nav ul li .nav-link {
+  font-weight: 500;
+  font-size: 1.2rem;
+  z-index: 11;
+  transition: .5s;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+nav ul li .nav-link:hover,
+.navbar-brand:hover {
+  scale: 1.15;
+
+}
+
+nav span {
+  color: var(--main-color);
+}
+
+#hero {
+  background-image: url(./imgs/bg.png);
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.navbar-brand {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:  0.3s ease-in-out;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navbar-brand::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: var(--main-color);
+  transition: all 0.3s ease-in-out;
+}
+.navbar-brand:hover {
+  transform: translateY(-3px); /* Slight upward motion */
+}
+
+.navbar-brand:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.container {
+  height: 80%;
+}
+
+.main_btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.01em 1.5em;
+  padding-top: 0.4rem;
+  border: var(--main-color) solid 0.15em;
+  border-radius: 0.25em;
+  color: var(--main-color);
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+
+.main_btn p {
+  z-index: 1;
+}
+
+.main_btn:hover {
+  color: #212121;
+}
+
+.main_btn:active {
+  border-color: teal;
+}
+
+.main_btn::after,
+.main_btn::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: var(--main-color);
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.main_btn::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.main_btn::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.main_btn:hover:before {
+  transform: translateX(-1em);
+}
+
+.main_btn:hover:after {
+  transform: translateX(1em);
+}
+
+.main_btn:active:before,
+.main_btn:active:after {
+  background: teal;
+}
+
+#hero .imgs {
+  position: relative;
+}
+
+.imgs img:nth-child(1) {
+  position: absolute;
+  left: 10px;
+  bottom: -510px;
+
+}
+
+.imgs img:nth-child(2) {
+  position: absolute;
+  right: -180px;
+  top: -90px;
+  rotate: 20deg;
+}
+
+#hero {
+  overflow: hidden;
+}
+
+input ,select {
+  border-radius: 25px;
+  border: 1px solid rgb(0, 0, 0);
+  background: transparent;
+  width: 300px;
+  padding: 10px 20px;
+  transition: .3s;
+}
+
+input,
+input::-webkit-input-placeholder  ,select {
+  font-size: 12px;
+  color: var(--text-color);
+  border: none;
+  transition: .3s;
+}
+
+input ,select {
+  border: none;
+
+  outline: var(--main-color) solid 1px;
+  
+  transition: all  0.3s;
+
+
+}
+input:hover ,select:hover {
+  border: none;
+  box-shadow: var(--main-color) 8px 4px 0px 0px;
+  /* outline: var(--main-color) solid 2px; */
+  scale: .97;
+  transition: all 0.3s;
+}
+input:focus ,select:focus {
+  border: none;
+  scale: 1.05;
+  box-shadow: var(--main-color) 8px 5px 0px 0px;
+
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+
+
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+
+select:focus {
+  border: none;
+  scale: 1.05;
+  box-shadow: var(--main-color) 8px 5px 0px 0px;
+
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+option {
+background: rgb(0, 0, 0);
+color:white;
+;
+font-size: 12px;
+}
+
+a{
+text-decoration: none;
+}
+.main_btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.01em 1.5em;
+  padding-top: 0.4rem;
+  border: var(--main-color) solid 0.15em;
+  border-radius: 0.25em;
+  color: var(--main-color);
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+
+.main_btn p {
+  z-index: 1;
+}
+
+.main_btn:hover {
+  color: #212121;
+}
+
+.main_btn:active {
+  border-color: teal;
+}
+
+.main_btn::after,
+.main_btn::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: var(--main-color);
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.main_btn::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.main_btn::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.main_btn:hover:before {
+  transform: translateX(-1em);
+}
+
+.main_btn:hover:after {
+  transform: translateX(1em);
+}
+
+.main_btn:active:before,
+.main_btn:active:after {
+  background: teal;
+}
+.cssbuttons-io-button {
+  background: #538D22;
+  color: #ebf3e1;
+  padding: 0.5em 1em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #538D22;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  width: 25%;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #538D22;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+
+.container-form{
+  background-color: rgba(255, 255, 255, 0.377);
+  backdrop-filter: blur(7px);
+  padding: 20px;
+  border-radius: 10px;
+}
+.imgs{
+  position: relative;
+}
+.tree{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  rotate: 0deg;
+  transform: translate(-110%, 30%);
+  z-index: -1;
+}
+.imgs .tree1 {
+  position: absolute;
+  transform: translate(40%, 20%);
+  top: 100px;
+
+}
